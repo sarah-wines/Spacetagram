@@ -1,12 +1,32 @@
 import React, { useState } from 'react';
+import { Card, Accordion } from 'react-bootstrap';
+import { Like } from './Like.js';
 
 export function Image(image) {
   const [picture] = useState(image.image);
-  console.log(picture.explanation);
+  console.log(picture.hd);
   return (
-    <div className="explanation">
-      <img alt="user pic" src={picture.hdurl} />
-      <p>{picture.explanation}</p>
-    </div>
+    <>
+      <div className="imageCardCont">
+        <div className="imageCard">
+          <Card>
+            <Card.Img variant="top" alt={picture.title} src={picture.hdurl} />
+            <Card.Body>
+              <Card.Title>{picture.title}</Card.Title>
+              <div className="heart">
+                <Like />
+              </div>
+              <Card.Title>{picture.date}</Card.Title>
+              <Accordion flush>
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>Details</Accordion.Header>
+                  <Accordion.Body>{picture.explanation}</Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
+    </>
   );
 }

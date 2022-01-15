@@ -1,9 +1,8 @@
-import { Images } from './components/Images.js';
+import { ImageList } from './components/ImageList.js';
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <Images />
+      <ImageList />
     </div>
   );
 }
