@@ -2,12 +2,32 @@
   width: 100%;
 }
 .imageCard {
-  padding: 3px;
-  width: 100%;
+  padding-top: 10px;
+  align-items: center;
+  padding-right: 18%;
+  padding-left: 18%;
 }
 img {
   width: 100%;
 }
 .heart {
   float: right;
+}
+
+#root {
+  background-color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  .imageCard {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+svg {
+  float: right;
+}
+.titles {
+  color: whitesmoke;
+  padding-left: 18%;
 }

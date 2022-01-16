@@ -1,12 +1,22 @@
 import { useState } from 'react';
-import Heart from 'react-animated-heart';
+import Heart from 'react-heart';
 
 export function Like() {
-  const [isClicked, setClick] = useState(false);
+  const [active, setActive] = useState(false);
 
   return (
-    <>
-      <Heart isClick={isClicked} onClick={() => setClick(!isClicked)} />
-    </>
+    <div
+      ariaLabel="Like"
+      role="button"
+      tabIndex="0"
+      className="heart"
+      style={{ width: '1.5rem' }}
+    >
+      <Heart
+        tabIndex="0"
+        isActive={active}
+        onClick={() => setActive(!active)}
+      />
+    </div>
   );
 }

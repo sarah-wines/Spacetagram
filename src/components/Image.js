@@ -9,13 +9,12 @@ export function Image(image) {
     <>
       <div className="imageCardCont">
         <div className="imageCard">
-          <Card>
+          <Card className="card">
             <Card.Img variant="top" alt={picture.title} src={picture.hdurl} />
             <Card.Body>
+              <Like />
               <Card.Title>{picture.title}</Card.Title>
-              <div className="heart">
-                <Like />
-              </div>
+
               <Card.Title>{picture.date}</Card.Title>
               <Accordion flush>
                 <Accordion.Item eventKey="0">

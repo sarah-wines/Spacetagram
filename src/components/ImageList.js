@@ -17,9 +17,12 @@ export function ImageList() {
   }, []);
   return (
     <>
-      <h1>Spacetagram</h1>
-      <h3>Brought to you by NASA's image API</h3>
       <Container fluid="sm">
+        <div className="titles">
+          <h1>Spacetagram</h1>
+          <h3>Brought to you by NASA's image API</h3>
+        </div>
+
         <div className="imageContainer">
           {images.map((image, idx) => {
             return (
