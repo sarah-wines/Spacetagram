@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Card, Accordion } from 'react-bootstrap';
-import { Like } from './Like.js';
+
+import Heart from 'react-heart';
 
 export function Image(image) {
   const [picture] = useState(image.image);
-  console.log(picture.hd);
+  const [active, setActive] = useState(false);
+  const tabIndex = 0;
+  console.log(picture);
   return (
     <>
       <div className="imageCardCont">
@@ -12,11 +15,19 @@ export function Image(image) {
           <Card className="card">
             <Card.Img variant="top" alt={picture.title} src={picture.hdurl} />
             <Card.Body>
-              <Like />
+              <div>
+                <Heart
+                  aria-label="Like"
+                  tabIndex={tabIndex}
+                  style={{ width: '1.5rem' }}
+                  isActive={active}
+                  onClick={() => setActive(!active)}
+                />
+              </div>
               <Card.Title>{picture.title}</Card.Title>
 
               <Card.Title>{picture.date}</Card.Title>
-              <Accordion flush>
+              <Accordion className="accordion" flush>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Details</Accordion.Header>
                   <Accordion.Body>{picture.explanation}</Accordion.Body>

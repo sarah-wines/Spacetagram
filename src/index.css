@@ -1,21 +1,9 @@
-.imageContainer {
-  width: 100%;
-}
-.imageCard {
-  padding-top: 10px;
-  align-items: center;
-  padding-right: 18%;
-  padding-left: 18%;
-}
-img {
-  width: 100%;
-}
-.heart {
-  float: right;
-}
-
 #root {
   background-color: black;
+}
+
+.imageContainer {
+  width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -24,10 +12,40 @@ img {
     padding-left: 0;
   }
 }
+
+.imageCard {
+  padding-top: 10px;
+  align-items: center;
+  padding-right: 18%;
+  padding-left: 18%;
+}
+
+img {
+  width: 100%;
+}
+
 svg {
   float: right;
+  margin: 5px;
 }
+
+svg:focus,
+svg:hover,
+svg:active {
+  outline: none;
+}
+
 .titles {
   color: whitesmoke;
   padding-left: 18%;
+}
+
+.accordion-button:active,
+.accordion-button:focus {
+  outline: none !important;
+  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: white !important;
+  color: black !important;
 }
