@@ -6,13 +6,6 @@
   width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  .imageCard {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 .imageCard {
   padding-top: 10px;
   align-items: center;
@@ -20,6 +13,12 @@
   padding-left: 18%;
 }
 
+@media screen and (max-width: 1000px) {
+  .imageCard {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 img {
   width: 100%;
 }
@@ -40,7 +39,6 @@ svg:active {
   padding-left: 18%;
 }
 
-.accordion-button:active,
 .accordion-button:focus {
   outline: none !important;
   box-shadow: none;
