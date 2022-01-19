@@ -9,13 +9,15 @@ export function ImageList() {
   useEffect(() => {
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?api_key=8cGPvrIOA5TQd7CdnZyeQTdEWQvfbftSlpyaDzkp&count=10`
+        `https://api.nasa.gov/planetary/apod?api_key=8cGPvrIOA5TQd7CdnZyeQTdEWQvfbftSlpyaDzkp&thumbs=True&count=10`
       )
       .then((response) => {
         setImages(response.data);
         setIsLoading(false);
+        console.log(response.data);
       });
   }, []);
+
   return isLoading ? (
     <>
       <Loading />
