@@ -1,11 +1,14 @@
 #root {
-  background-color: black;
+  background-color: rgb(28, 26, 26);
 }
 
 .imageContainer {
   width: 100%;
 }
 
+.container-sm {
+  padding-bottom: 20%;
+}
 .imageCard {
   padding-top: 10px;
   align-items: center;
