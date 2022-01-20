@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Card, Accordion } from 'react-bootstrap';
-
 import Heart from 'react-heart';
+
+/* This component renders individual image cards and video thumnails. */
 
 export function Image(image) {
   const [picture] = useState(image.image);
   const [active, setActive] = useState(false);
-
   const tabIndex = 0;
-  console.log(picture.media_type);
+
   return (
     <>
       <div className="imageCardCont">

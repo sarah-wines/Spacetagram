@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 import { Image } from './Image.js';
 import { Container } from 'react-bootstrap';
 import { Loading } from './Loading';
+
+/* This component handles the api call, loading state, and the card container. */
+
 export function ImageList() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -14,9 +17,10 @@ export function ImageList() {
       .then((response) => {
         setImages(response.data);
         setIsLoading(false);
-        console.log(response.data);
       });
   }, []);
+
+  /*Loading state inserted for api call response time*/
 
   return isLoading ? (
     <>
