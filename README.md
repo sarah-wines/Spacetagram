@@ -4,7 +4,7 @@ Spacetagram is a fully responsive app that provides 10 randomly selected images 
 
 View the deployed app here: [https://spacetagram-sarah-w.herokuapp.com/]
 
-##To run:
+## To run:
 
 clone the repo
 
